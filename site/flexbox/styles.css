@@ -1,92 +1,127 @@
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0 8%;
-    grid-auto-flow: row;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     height: 1080px;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item-full {
+    flex: 1;
+}
+
+.flex-item-half {
+    flex: 0.5;
+}
+
+.flex-item-quarter {
+    flex: 0.25;
+    text-align: center; /* Align text to the left */
+    padding: 20px;
+
+}
+/* New classes to style the header and footer content */
+.header-content, .footer-content {
+    flex: 0.75; /* Take up remaining space */
+    padding: 20px;
+    text-align: center; /* Keep text centered here */
+    align-self: center;
+}
+
 .footer {
-    grid-area: 6 / 1 / 6 / 5;
     background-color: #c4d7ef;
     border: #030303;
     border-style: solid;
     border-radius: 7px;
-
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
 }
 
 .header {
-    grid-area: 1 / 1 / 2 / 5;
     background-color: #c4d7ef;
     border: #030303;
     border-style: solid;
     border-radius: 7px;
-
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
 }
 
 .two {
-    grid-area: 2 / 1 / 6 / 2;
     border-left: 3px solid black;
     border-right: 3px solid black;
     background-color: #eeaf7b;
     border-radius: 7px;
-    padding: 20px
+    padding: 20px;
+    margin-right: 8%;
+
 }
 
 .three {
-    grid-area: 2 / 2 / 6 / 3;
     border-left: 3px solid black;
     border-right: 3px solid black;
     background-color: #6df357;
     border-radius: 7px;
-
+    padding: 20px;
+    margin-right: 8%;
 }
 
 .four {
-    grid-area: 2 / 3 / 3 / 5;
     border-left: 3px solid black;
     border-bottom: 3px solid black;
     border-right: 3px solid black;
     background-color: #eeaf7b;
     border-radius: 7px;
+    padding: 20px;
+    height: min-content;
 }
 
 .five {
-    grid-area: 3 / 3 / 6 / 4;
     border-left: 3px solid black;
     border-right: 3px solid black;
     background-color: #3aa1a1;
     border-radius: 7px;
-
+    padding: 20px;
+    margin-right: 16%;
 }
 
 .six {
-    grid-area: 3 / 4 / 6 / 5;
     border-left: 3px solid black;
     border-right: 3px solid black;
     background-color: #6df357;
     border-radius: 7px;
+    padding: 20px;
 }
 
 .x {
     align-self: center;
-    margin-left: 40px;
-    grid-area: 1 / 1 / 2 / 2;
     border: #030303;
     border-style: solid;
     background-color: #ffffff;
     border-radius: 7px;
-
-}
+    }
 
 .y {
     align-self: center;
-    margin-right: 40px;
-    grid-area: 6 / 4 / 6 / 5;
     border: #030303;
     border-style: solid;
     background-color: #ffffff;
     border-radius: 7px;
 }
+
+
