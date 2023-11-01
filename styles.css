@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0px 8%;
+    gap: 0 8%;
     grid-auto-flow: row;
     text-align: center;
     height: 1080px;
