@@ -14,18 +14,87 @@ body, html {
 
 /* Header styling */
 .header {
-    padding: 20px;
-    background: #fdfdfd; /* Replace with your header color */
-    /* Add additional header styles here */
+    padding: 10px;
+    background: #f1f1f1; /* Adjust the color to match your design */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-content {
+    width: 100%;
+    padding: 10px;
+    background: #f1f1f1; /* Adjust the color to match your design */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 7%;
+}
+
+.search-container {
+    display: flex;
+    border: 1px solid #ccc; /* Style the border as per your design */
+    border-radius: 5px; /* Optional: if you want rounded corners */
+}
+
+.search-container input[type="search"] {
+    border: none;
+    padding: 8px;
+    margin: 0;
+    height: 30px; /* Adjust as needed */
+    border-radius: 5px 0 0 5px; /* Optional: if you have rounded corners */
+}
+
+.search-container button {
+    background: #ffffff; /* Adjust the color to match your design */
+    border: none;
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 0 5px 5px 0; /* Optional: if you have rounded corners */
+}
+
+.menu-icon {
+    font-size: 24px; /* Adjust the size as needed */
+    cursor: pointer;
+    align-self: end;
 }
 
 /* Footer styling */
 .footer {
     padding: 20px;
-    background: #1a1a1a; /* Replace with your footer color */
-    /* Add additional footer styles here */
+    background: #1a1a1a; /* Your preferred footer background color */
+    color: #fff; /* Text color */
 }
 
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Push the logo and nav to opposite ends */
+    align-items: center; /* Vertically center items */
+    margin: 0 8%; /* This will center your footer content if the view is wider than max-width */
+}
+
+
+.footer-nav {
+    /* If you want to ensure that the nav doesn't wrap, add nowrap */
+    white-space: nowrap;
+}
+
+
+.footer-nav ol {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px; /* Space out the list items */
+    margin: 0; /* Reset default margin */
+}
+
+.crumb {
+    padding: 5px 10px;
+    background: #1a1a1a; /* Your preferred crumb background color */
+    /* More styles as needed */
+}
 /* Main content styling */
 .main {
     flex-grow: 1;
@@ -58,6 +127,7 @@ body, html {
     display: flex;
     flex-wrap: wrap; /* Allow cards to wrap onto the next line */
     justify-content: space-between;
+
 }
 
 .card {
@@ -81,6 +151,7 @@ body, html {
 }
 
 .card button.more {
+    position: static;
     background: #e3244e; /* Replace with your button background color */
     color: #fff;
     border: none;
@@ -89,24 +160,59 @@ body, html {
     border-radius: 2px; /* Optional: if you want rounded button corners */
 }
 
-/* Breadcrumbs */
-.crumbs {
-    list-style: none;
-    padding: 0;
+.menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
     display: flex;
+    padding-right: 8%;
 }
-
-.crumb {
-    margin-right: 10px;
-    padding: 5px 10px;
-    background: #ddd; /* Replace with your crumb background color */
-    /* Add more styles if needed */
+.line {
+    fill: none;
+    stroke: black;
+    stroke-width: 6;
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.line2 {
+    stroke-dasharray: 60 60;
+    stroke-width: 6;
+}
+.line3 {
+    stroke-dasharray: 60 207;
+    stroke-width: 6;
+}
+.opened .line1 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+.opened .line2 {
+    stroke-dasharray: 1 60;
+    stroke-dashoffset: -30;
+    stroke-width: 6;
+}
+.opened .line3 {
+    stroke-dasharray: 90 207;
+    stroke-dashoffset: -134;
+    stroke-width: 6;
+}
+.bottomLink {
+    color: white;
+    text-align: center;
 }
 
 /* Media query for a max-width of 768px */
 @media (max-width: 768px) {
     .card {
         width: calc(50% - 20px); /* Adjust width for 2 cards per row or full width depending on design */
+    }
+    .search-container input[type="search"] {
+        width: 100%;
     }
 }
 

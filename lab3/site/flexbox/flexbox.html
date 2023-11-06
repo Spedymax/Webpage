@@ -9,10 +9,22 @@
 <body>
 
 <div class="container">
-    <div class="header">
-        <p>SearchBar</p>
-        <p>Menu</p>
-    </div>
+    <header class="header">
+        <div class="header-content">
+            <div class="search-container">
+                <input type="search" placeholder="Search" id="site-search" name="q" aria-label="Search through site content">
+                <button>⌕</button>
+            </div>
+<!--            классна кнопка :) -->
+            <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                <svg width="50" height="50" viewBox="0 0 100 100">
+                    <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="line line2" d="M 20,50 H 80" />
+                    <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+            </button>
+        </div>
+    </header>
     <div class="main">
         <div class="MainText">
             <h1>What Makes Us Different</h1>
@@ -22,37 +34,47 @@
             <div class="card">
                 <img src="img/img1.png" alt="img1">
                 <h2>BRANDING</h2>
-                <p>Logo design, business cards, corporate stationery and development of branding across print, social media.</p>
+                <p>At our design studio, we specialize in creating impactful visual identities that make businesses stand out in today's competitive marketplace. Our comprehensive branding services are tailored to meet the unique needs of each client, ensuring their brand speaks effectively to their desired audience.</p>
+                <p>At our design studio, we specialize in creating impactful visual identities that make businesses stand out in today's competitive marketplace. Our comprehensive branding services are tailored to meet the unique needs of each client, ensuring their brand speaks effectively to their desired audience.</p>
                 <button class="more">more</button>
             </div>
             <div class="card">
                 <img src="img/img2.png" alt="img2">
                 <h2>PRINT</h2>
-                <p>Flyers, leaflets, exhibition graphics, brochures, product catalogues, reports and packaging.</p>
+                <p>Our bespoke flyer and leaflet design services are perfect for clients seeking to announce events, promotions, or simply raise awareness of their brand. We create eye-catching designs that are informative and engaging to generate a strong response from the target audience.</p>
+                <p>Our bespoke flyer and leaflet design services are perfect for clients seeking to announce events, promotions, or simply raise awareness of their brand. We create eye-catching designs that are informative and engaging to generate a strong response from the target audience.</p>
                 <button class="more">more</button>
             </div>
             <div class="card">
                 <img src="img/img3.png" alt="img3">
                 <h2>DIGITAL</h2>
-                <p>Responsive websites (static HTML and CMS - Wordpress), graphics for social media, web banner advertising.</p>
+                <p> In today's fast-paced digital landscape, a responsive website is non-negotiable. We create responsive web designs that ensure a seamless user experience across all devices, including desktops, tablets, and smartphones. We tailor your site to meet your specific needs.</p>
+                <p> In today's fast-paced digital landscape, a responsive website is non-negotiable. We create responsive web designs that ensure a seamless user experience across all devices, including desktops, tablets, and smartphones. We tailor your site to meet your specific needs.</p>
                 <button class="more">more</button>
             </div>
         </div>
         <div class="bottomLink">
-            <!-- Bottom link content goes here -->
+            <p>Image from Freepic</p>
         </div>
     </div>
     <div class="footer">
-        <nav class="crumbs">
-            <ol>
-                <li class="crumb">Home</li>
-                <li class="crumb">Page1</li>
-                <li class="crumb">Page2</li>
-                <li class="crumb">Page3</li>
-                <li class="crumb">Page4</li>
-                <li class="crumb">Page5</li>
-            </ol>
-        </nav>
+        <div class="footer-content">
+            <img src="img/logo.png" alt="logo">
+            <nav class="footer-nav">
+                <ol>
+                    <li class="crumb">Home</li>
+                    <li class="crumb">45</li>
+                    <li class="crumb">456</li>
+                    <li class="crumb">678</li>
+                    <li class="crumb">Page 1</li>
+                    <li class="crumb">Page 2</li>
+                    <li class="crumb">Page 4</li>
+                    <li class="crumb">Page 5</li>
+                    <li class="crumb">Page 6</li>
+                    <li class="crumb">Page 7</li>
+                </ol>
+            </nav>
+        </div>
     </div>
 </div>
 
