@@ -1,0 +1,123 @@
+/* Base styles */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container setup */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Header styling */
+.header {
+    padding: 20px;
+    background: #fdfdfd; /* Replace with your header color */
+    /* Add additional header styles here */
+}
+
+/* Footer styling */
+.footer {
+    padding: 20px;
+    background: #1a1a1a; /* Replace with your footer color */
+    /* Add additional footer styles here */
+}
+
+/* Main content styling */
+.main {
+    flex-grow: 1;
+    background-image: url('img/mainBackground.jpg'); /* Replace with your main content color */
+    /* Add additional main content styles here */
+    padding: 50px 15%;
+    box-sizing: border-box;
+}
+
+/* Main title and subtitle */
+.MainText {
+    color: #ffffff; /* Replace with your preferred text color */
+    margin-bottom: 40px;
+}
+
+.MainText h1 {
+    font-size: 2.5em;
+    color: #ffffff; /* Replace with the color you want for your main titles */
+    margin: 0 0 10px;
+}
+
+.MainText p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Card styles */
+.Cards {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap onto the next line */
+    justify-content: space-between;
+}
+
+.card {
+    flex: 1;
+    margin: 10px 10px;
+    background: #ffffff; /* Replace with your card background color */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Simple box shadow for a subtle depth effect */
+    border-radius: 4px; /* Optional: if you want rounded corners */
+    box-sizing: border-box; /* ensure padding is included in width */
+    width: calc(33.333% - 20px); /* Subtract the margin from the width (if 3 cards per row) */
+}
+
+.card h2 {
+    color: #000000; /* Replace with the color you want for card titles */
+    margin: 0 0 10px;
+}
+
+.card p {
+    margin: 0 0 20px;
+}
+
+.card button.more {
+    background: #e3244e; /* Replace with your button background color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 2px; /* Optional: if you want rounded button corners */
+}
+
+/* Breadcrumbs */
+.crumbs {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.crumb {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background: #ddd; /* Replace with your crumb background color */
+    /* Add more styles if needed */
+}
+
+/* Media query for a max-width of 768px */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* Adjust width for 2 cards per row or full width depending on design */
+    }
+}
+
+/* Media query for a max-width of 480px */
+@media (max-width: 480px) {
+    .Cards {
+        flex-direction: column; /* Stack cards in a column */
+    }
+
+    .card {
+        width: auto; /* Cards take full width of the container */
+        margin: 10px 0; /* Adjust margin for vertical stacking */
+    }
+}

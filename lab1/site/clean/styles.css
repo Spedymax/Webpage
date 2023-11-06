@@ -1,0 +1,111 @@
+.container {
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* Для очищення floats */
+}
+
+.row, .header, .footer {
+    clear: both;
+    width: 100%;
+    overflow: hidden; /* Для очищення floats */
+}
+
+.column {
+    width: 100%;
+    overflow: hidden; /* Для очищення floats */
+}
+
+.flex-item-full {
+    width: 100%;
+    clear: both;
+    display: block;
+}
+
+.flex-item-half {
+    width: 50%;
+    float: left;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.flex-item-quarter {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+}
+
+.header-content, .footer-content {
+    width: 75%;
+    float: left;
+    box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer, .header {
+    background-color: #c4d7ef;
+    border: #030303 solid;
+    border-radius: 7px;
+    padding: 20px;
+    width: 100%;
+    overflow: hidden; /* Для очищення floats */
+    text-align: center;
+}
+
+.two, .three, .four, .five, .six {
+    border: 3px solid black;
+    border-radius: 7px;
+    padding: 20px;
+    margin-right: 2%; /* Adjusted margin for spacing */
+    float: left; /* Floats for inline positioning */
+    box-sizing: border-box;
+    width: auto; /* Adjust width as per the content */
+}
+
+/* For the elements that should not take full width */
+.two, .three {
+    width: 46%; /* Adjusted width for 2% margin */
+}
+
+.four {
+    width: 96%; /* Adjusted width for 2% margin if needed */
+    margin-right: 0; /* Remove margin if it is last in the row */
+    border-bottom: none; /* Adjust according to design */
+}
+
+.five, .six {
+    width: 49%; /* Adjusted width for 2% margin */
+}
+
+/* Clearfix for the floated elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.x, .y {
+    width: auto;
+    display: inline-block; /* Use inline-block for x and y for proper alignment */
+    background-color: #ffffff;
+    border: #030303 solid;
+    border-radius: 7px;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    float: none; /* Do not float x and y, they sit in natural flow */
+}
+
+/* Align x and y centrally if needed */
+.x, .y {
+    margin: 0 auto;
+    display: block;
+}
+
+/* Remove the last margin in the row for proper alignment */
+.row div:last-child, .row .column:last-child {
+    margin-right: 0;
+}
