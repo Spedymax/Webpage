@@ -1,6 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
+    height: 1080px;
 }
 
 .row {
@@ -48,7 +49,6 @@ h2, h3 {
     text-align: center;
     display: flex;
     flex-direction: row;
-    margin: 10px;
 }
 
 .header {
@@ -60,21 +60,21 @@ h2, h3 {
     text-align: center;
     display: flex;
     flex-direction: row;
-    margin: 10px;
 }
 
 .two {
-    border: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
     background-color: #eeaf7b;
     border-radius: 7px;
     padding: 20px;
     margin-right: 8%;
-    margin-left: 10px;
 
 }
 
 .three {
-    border: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
     background-color: #6df357;
     border-radius: 7px;
     padding: 20px;
@@ -82,29 +82,30 @@ h2, h3 {
 }
 
 .four {
-    border: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
     background-color: #eeaf7b;
     border-radius: 7px;
     padding: 20px;
     height: min-content;
-    margin-right: 10px;
 }
 
 .five {
-    border: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
     background-color: #3aa1a1;
     border-radius: 7px;
     padding: 20px;
     margin-right: 16%;
-    margin-top: 10px;
 }
 
 .six {
-    border: 3px solid black;
+    border-left: 3px solid black;
+    border-right: 3px solid black;
     background-color: #6df357;
     border-radius: 7px;
     padding: 20px;
-    margin: 10px 10px 0 10px;
 }
 
 .x {

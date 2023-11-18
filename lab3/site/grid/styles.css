@@ -78,7 +78,7 @@ body, html {
 
 .footer-nav {
     /* If you want to ensure that the nav doesn't wrap, add nowrap */
-    white-space: nowrap;
+    /*white-space: nowrap;*/
 }
 
 
@@ -90,9 +90,21 @@ body, html {
     margin: 0; /* Reset default margin */
 }
 
+
+/* When the menu is toggled, animate the burger icon */
+.change .bar1 {
+    transform: rotate(-45deg) translate(-7px, 6px);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
 .crumb {
     padding: 5px 10px;
-    background: #1a1a1a; /* Your preferred crumb background color */
+    background: transparent; /* Your preferred crumb background color */
     /* More styles as needed */
 }
 /* Main content styling */
@@ -213,6 +225,17 @@ body, html {
     }
     .search-container input[type="search"] {
         width: 100%;
+    }
+    .footer-menu-button {
+        display: flex; /* Show the burger menu button */
+    }
+
+    .footer-nav ol {
+        display: none; /* Hide the list initially */
+    }
+
+    .footer-nav.open {
+        display: block;
     }
 }
 
