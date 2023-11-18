@@ -32,7 +32,6 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-content: flex-start;
-    margin: 10px;
 }
 
 .two, .three, .four, .five, .six {
@@ -86,12 +85,7 @@ body, html {
 .content {
     display: flex;
     flex-basis: 100%;
-
-
-
-
-
-    justify-content: space-around
+    justify-content: space-between;
 }
 
 .five, .six {
@@ -99,8 +93,8 @@ body, html {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .header, .footer {
+@media screen and (max-width: 768px) {
+    .header, .footer, .main-content {
         flex-direction: column;
     }
 

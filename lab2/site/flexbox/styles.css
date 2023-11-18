@@ -1,7 +1,6 @@
 .container {
     display: flex;
     flex-direction: column;
-    height: 1080px;
 }
 
 .row {
@@ -49,6 +48,7 @@ h2, h3 {
     text-align: center;
     display: flex;
     flex-direction: row;
+    margin: 10px;
 }
 
 .header {
@@ -60,21 +60,21 @@ h2, h3 {
     text-align: center;
     display: flex;
     flex-direction: row;
+    margin: 10px;
 }
 
 .two {
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border: 3px solid black;
     background-color: #eeaf7b;
     border-radius: 7px;
     padding: 20px;
     margin-right: 8%;
+    margin-left: 10px;
 
 }
 
 .three {
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border: 3px solid black;
     background-color: #6df357;
     border-radius: 7px;
     padding: 20px;
@@ -82,30 +82,29 @@ h2, h3 {
 }
 
 .four {
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
-    border-right: 3px solid black;
+    border: 3px solid black;
     background-color: #eeaf7b;
     border-radius: 7px;
     padding: 20px;
     height: min-content;
+    margin-right: 10px;
 }
 
 .five {
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border: 3px solid black;
     background-color: #3aa1a1;
     border-radius: 7px;
     padding: 20px;
     margin-right: 16%;
+    margin-top: 10px;
 }
 
 .six {
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border: 3px solid black;
     background-color: #6df357;
     border-radius: 7px;
     padding: 20px;
+    margin: 10px 10px 0 10px;
 }
 
 .x {
@@ -122,6 +121,35 @@ h2, h3 {
     border-style: solid;
     background-color: #ffffff;
     border-radius: 7px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        /* Adjust container for mobile */
+    }
+
+    .row, .column {
+        /* Stack elements vertically */
+        flex-direction: column;
+    }
+
+    .flex-item-full, .flex-item-half, .flex-item-quarter {
+        /* Make all flex items full width on small screens */
+        flex: 1;
+        flex-direction: column;
+    }
+
+    h2, h3 {
+        /* Adjust header text sizes */
+        font-size: smaller;
+    }
+
+    /* Adjust padding and margin for smaller screens */
+    .two, .three, .four, .five, .six {
+        padding: 10px;
+        margin: 5px;
+    }
 }
 
 

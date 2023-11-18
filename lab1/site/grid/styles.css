@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 0 8%;
+    gap: 0 4%;
     grid-auto-flow: row;
     text-align: center;
     height: 1080px;
@@ -28,46 +28,43 @@
 
 .two {
     grid-area: 2 / 1 / 6 / 2;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border: 3px solid black;
     background-color: #eeaf7b;
     border-radius: 7px;
-    padding: 20px
+    padding: 20px;
+    margin: 10px;
 }
 
 .three {
     grid-area: 2 / 2 / 6 / 3;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border: 3px solid black;
     background-color: #6df357;
     border-radius: 7px;
-
+    margin: 10px;
 }
 
 .four {
     grid-area: 2 / 3 / 3 / 5;
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
-    border-right: 3px solid black;
+    border: 3px solid black;
     background-color: #eeaf7b;
     border-radius: 7px;
+    margin: 10px;
 }
 
 .five {
     grid-area: 3 / 3 / 6 / 4;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border: 3px solid black;
     background-color: #3aa1a1;
     border-radius: 7px;
-
+    margin: 10px;
 }
 
 .six {
     grid-area: 3 / 4 / 6 / 5;
-    border-left: 3px solid black;
-    border-right: 3px solid black;
+    border: 3px solid black;
     background-color: #6df357;
     border-radius: 7px;
+    margin: 10px;
 }
 
 .x {
