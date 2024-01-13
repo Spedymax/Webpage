@@ -122,6 +122,22 @@ h2, h3 {
     background-color: #ffffff;
     border-radius: 7px;
 }
+.accordion-item {
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    padding: 10px;
+}
+
+.accordion-header {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.accordion-content {
+    display: none;
+    padding: 10px;
+}
+
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
