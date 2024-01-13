@@ -1,0 +1,22 @@
+{
+  "name": "webpage",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spedymax/website-test.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Spedymax",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spedymax/website-test/issues"
+  },
+  "homepage": "https://github.com/Spedymax/website-test#readme"
+}
