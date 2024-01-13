@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Макет сайту</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="test.js"></script>
 </head>
 <body>
-<?php
-$accordionData = json_decode(file_get_contents('../first/accordionData.json'), true);
-?>
 <div class="container">
     <div class="header flex-item-full">
         <div class="x flex-item-quarter">
@@ -26,50 +24,7 @@ $accordionData = json_decode(file_get_contents('../first/accordionData.json'), t
             <p>Ми прагнемо зробити світ кращим, пропонуючи якісні продукти та послуги. Наша команда працює щодня, щоб ви могли отримувати тільки найкраще.</p>
         </div>
         <div class="three flex-item-quarter">
-            <script>
-                var accordionData = <?php echo json_encode($accordionData); ?>;
-
-                // Функція для створення "Accordion"
-                function createAccordion(accordionData) {
-                    var accordionContainer = document.getElementById('accordion');
-                    accordionContainer.innerHTML = ''; // Очистити попередній контент
-
-                    accordionData.forEach(function(content, index) {
-                        var accordionItem = document.createElement('div');
-                        accordionItem.classList.add('accordion-item');
-
-                        var accordionHeader = document.createElement('div');
-                        accordionHeader.classList.add('accordion-header');
-                        accordionHeader.innerText = 'Розділ ' + (index + 1);
-                        accordionHeader.onclick = function() { toggleAccordion('content-' + index); };
-
-                        var accordionContent = document.createElement('div');
-                        accordionContent.classList.add('accordion-content');
-                        accordionContent.id = 'content-' + index;
-                        accordionContent.style.display = 'none';
-                        accordionContent.innerHTML = '<p>' + content + '</p>';
-
-                        accordionItem.appendChild(accordionHeader);
-                        accordionItem.appendChild(accordionContent);
-                        accordionContainer.appendChild(accordionItem);
-                    });
-                }
-
-                // Функція для переключення відображення контенту "Accordion"
-                function toggleAccordion(id) {
-                    var content = document.getElementById(id);
-                    if (content.style.display === 'none') {
-                        content.style.display = 'block';
-                    } else {
-                        content.style.display = 'none';
-                    }
-                }
-
-                // Виклик функції createAccordion при завантаженні сторінки
-                document.addEventListener('DOMContentLoaded', function() {
-                    createAccordion(accordionData);
-                });
-            </script>
+            <button onclick="createAccordion()">Створити</button>
 
             <div id="accordion"></div>
 
