@@ -1,4 +1,3 @@
-/* Reset some default styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -54,7 +53,6 @@ body, html {
     background-color: #3aa1a1;
 }
 
-/* Header and Footer child elements */
 .x, .y {
     flex-basis: 25%;
     background-color: #ffffff;
@@ -68,9 +66,9 @@ body, html {
     text-align: center;
 }
 
-/* Main content elements */
+
 .two, .three {
-    flex-basis: 25%; /* Subtract margin */
+    flex-basis: 25%;
 }
 
 .menu {
@@ -95,7 +93,7 @@ body, html {
 }
 
 .five, .six {
-    flex-basis: calc(50% - 40px); /* Subtract margin */
+    flex-basis: calc(50% - 40px);
 }
 
 /* Responsive Design */

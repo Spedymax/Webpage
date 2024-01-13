@@ -1,0 +1,155 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+h2, h3 {
+    margin: 0;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-item-full {
+    flex: 1;
+}
+
+.flex-item-half {
+    flex: 0.5;
+}
+
+.flex-item-quarter {
+    flex: 0.25;
+    text-align: center; /* Align text to the left */
+    padding: 20px;
+
+}
+/* New classes to style the header and footer content */
+.header-content, .footer-content {
+    flex: 0.75; /* Take up remaining space */
+    padding: 20px;
+    text-align: center; /* Keep text centered here */
+    align-self: center;
+}
+
+.footer {
+    background-color: #c4d7ef;
+    border: #030303;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.header {
+    background-color: #c4d7ef;
+    border: #030303;
+    border-style: solid;
+    border-radius: 7px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.two {
+    border: 3px solid black;
+    background-color: #eeaf7b;
+    border-radius: 7px;
+    padding: 20px;
+    margin-right: 8%;
+    margin-left: 10px;
+
+}
+
+.three {
+    border: 3px solid black;
+    background-color: #6df357;
+    border-radius: 7px;
+    padding: 20px;
+    margin-right: 8%;
+}
+
+.four {
+    border: 3px solid black;
+    background-color: #eeaf7b;
+    border-radius: 7px;
+    padding: 20px;
+    height: min-content;
+    margin-right: 10px;
+}
+
+.five {
+    border: 3px solid black;
+    background-color: #3aa1a1;
+    border-radius: 7px;
+    padding: 20px;
+    margin-right: 16%;
+    margin-top: 10px;
+}
+
+.six {
+    border: 3px solid black;
+    background-color: #6df357;
+    border-radius: 7px;
+    padding: 20px;
+    margin: 10px 10px 0 10px;
+}
+
+.x {
+    align-self: center;
+    border: #030303;
+    border-style: solid;
+    background-color: #ffffff;
+    border-radius: 7px;
+    }
+
+.y {
+    align-self: center;
+    border: #030303;
+    border-style: solid;
+    background-color: #ffffff;
+    border-radius: 7px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .container {
+        /* Adjust container for mobile */
+    }
+
+    .row, .column {
+        /* Stack elements vertically */
+        flex-direction: column;
+    }
+
+    .flex-item-full, .flex-item-half, .flex-item-quarter {
+        /* Make all flex items full width on small screens */
+        flex: 1;
+        flex-direction: column;
+    }
+
+    h2, h3 {
+        /* Adjust header text sizes */
+        font-size: smaller;
+    }
+
+    /* Adjust padding and margin for smaller screens */
+    .two, .three, .four, .five, .six {
+        padding: 10px;
+        margin: 5px;
+    }
+}
+
+

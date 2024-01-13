@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Макет сайту</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="accordion.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header flex-item-full">
+        <div class="x flex-item-quarter">
+            <h2>Вітаємо у "XYZ"</h2>
+        </div>
+        <div class="header-content">
+            <h2>Ласкаво просимо!</h2>
+            <p>Дякую що завітали на наш сайт</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="two flex-item-quarter">
+            <h2>Наша місія</h2>
+            <p>Ми прагнемо зробити світ кращим, пропонуючи якісні продукти та послуги. Наша команда працює щодня, щоб ви могли отримувати тільки найкраще.</p>
+        </div>
+        <div class="three flex-item-quarter">
+            <div class="accordion-form">
+                <label for="accordionCount">Кількість елементів:</label>
+                <input type="number" id="accordionCount" name="accordionCount" min="1">
+                <button onclick="createAccordion()">Створити</button>
+            </div>
+            <div id="accordion"></div>
+
+            <script>
+                function createAccordion() {
+                    var count = document.getElementById("accordionCount").value;
+                    var accordionContainer = document.getElementById("accordion");
+                    accordionContainer.innerHTML = '';
+
+                    for (var i = 0; i < count; i++) {
+                        var accordionItem = document.createElement("div");
+                        accordionItem.classList.add("accordion-item");
+                        accordionItem.innerHTML = `
+            <div class="accordion-header" onclick="toggleAccordion(${i})">Розділ ${i + 1}</div>
+            <div class="accordion-content" id="content-${i}" style="display:none;">
+                <textarea>Введіть ваш текст тут...</textarea>
+            </div>
+        `;
+                        accordionContainer.appendChild(accordionItem);
+                    }
+                }
+
+                function toggleAccordion(index) {
+                    var content = document.getElementById("content-" + index);
+                    if (content.style.display === "none") {
+                        content.style.display = "block";
+                    } else {
+                        content.style.display = "none";
+                    }
+                }
+            </script>
+            <button onclick="saveAccordionData()">Зберегти Дані</button>
+
+        </div>
+        <div class="flex-item-half column">
+            <div class="four flex-item-quarter">
+                <h1>Головне меню</h1>
+                <ul>
+                    <li><a href="#">Домашня сторінка</a></li>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Послуги</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="five flex-item-half">
+                    <p>Для нас важливо ваше задоволення від співпраці. Ми завжди готові вислухати ваши побажання та пропозиції.</p>
+                    <p>Для нас важливо ваше задоволення від співпраці. Ми завжди готові вислухати ваши побажання та пропозиції.</p>
+                </div>
+                <div class="six flex-item-half">
+                    <p>З нами легко та просто! Наша команда завжди готова вам допомогти в реалізації ваших проектів.</p>
+                    <p>З нами легко та просто! Наша команда завжди готова вам допомогти в реалізації ваших проектів.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer flex-item-full">
+        <div class="footer-content">
+            <h2>Останні новини</h2>
+            <p>В цьому розділі ми публікуємо найсвіжіші новини нашої компанії. Тут ви можете знайти інформацію про наші останні досягнення, нові продукти та акції.</p>
+            <p>Не пропустіть можливість бути в курсі подій!</p>
+        </div>
+        <div class="y flex-item-quarter">
+            <h3>Технології майбутнього сьогодні!</h3>
+        </div>
+    </div>
+</div>
+</body>
+</html>
