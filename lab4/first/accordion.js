@@ -14,7 +14,6 @@ function createAccordion(count) {
         accordionContainer.appendChild(accordionItem);
     }
 }
-
 function saveAccordionChanges() {
     var accordionData = [];
     document.querySelectorAll('.accordion-item').forEach(function(item) {
