@@ -95,5 +95,43 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    fetchAccordionData();
+});
+
+function fetchAccordionData() {
+    fetch('getAccordionData.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.length > 0) {
+                createAccordion(data);
+            } else {
+                // No data found, create a default accordion
+                createAccordion(3); // Pass default count if no data
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching accordion data:', error);
+        });
+}
+
+function createAccordion(data) {
+    var accordionContainer = document.getElementById("accordion");
+    accordionContainer.innerHTML = '';
+
+    data.forEach(function(content, i) {
+        var accordionItem = document.createElement("div");
+        accordionItem.classList.add("accordion-item");
+        accordionItem.innerHTML = `
+            <div class="accordion-header" onclick="toggleAccordion(${i})">Розділ ${i + 1}</div>
+            <div class="accordion-content" id="content-${i}" style="display:none;">
+                <textarea oninput="saveAccordionChanges()">${content}</textarea>
+            </div>
+        `;
+        accordionContainer.appendChild(accordionItem);
+    });
+}
+</script>
 </body>
 </html>
