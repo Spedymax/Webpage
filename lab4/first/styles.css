@@ -1,3 +1,5 @@
+
+
 .container {
     display: flex;
     flex-direction: column;
@@ -127,24 +129,36 @@ h2, h3 {
     border: 1px solid #ddd;
     margin-bottom: 5px;
     padding: 10px;
+    background-color: #f9f9f9; /* Light background for each accordion item */
+    border-radius: 8px; /* Rounded borders for a softer look */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
 }
 
 .accordion-header {
     font-weight: bold;
     cursor: pointer;
+    padding: 10px;
+    color: #333; /* Darker text for better readability */
+    background-color: #e7e7e7; /* Slightly different background for the header */
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+.accordion-header:hover {
+    background-color: #d4d4d4; /* Slightly darker on hover for interactivity */
 }
 
 .accordion-content textarea {
-    width: 100%;
+    width: 90%;
     height: 100px;
+    padding: 10px; /* Padding inside the text area */
+    border: 1px solid #ccc; /* Subtle border for the text area */
+    border-radius: 4px; /* Slightly rounded corners for the text area */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Inner shadow for depth */
 }
 
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
-    .container {
-        /* Adjust container for mobile */
-    }
 
     .row, .column {
         /* Stack elements vertically */
