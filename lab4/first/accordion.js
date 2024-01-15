@@ -8,17 +8,24 @@ function createAccordion() {
         accordionItem.classList.add("accordion-item");
         accordionItem.innerHTML = `
             <div class="accordion-header">
-                <input type="text" class="accordion-title-input" placeholder="Введіть заголовок тут..." oninput="saveAccordionChanges()">
+                <input type="text" class="accordion-title-input" placeholder="Введіть заголовок тут...">
                 <button onclick="toggleAccordion(${i})">Розкрити</button>
             </div>
             <div class="accordion-content" id="content-${i}" style="display:none;">
-                <textarea oninput="saveAccordionChanges()">Введіть ваш текст тут...</textarea>
+                <textarea>Введіть ваш текст тут...</textarea>
             </div>
         `;
         accordionContainer.appendChild(accordionItem);
     }
 }
-
+function toggleAccordion(index) {
+    var content = document.getElementById("content-" + index);
+    if (content.style.display === "none") {
+        content.style.display = "block";
+    } else {
+        content.style.display = "none";
+    }
+}
 function saveAccordionChanges() {
     var accordionData = [];
     document.querySelectorAll('.accordion-item').forEach(function(item) {

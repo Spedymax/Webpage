@@ -146,7 +146,7 @@ h2, h3 {
     background-color: #d4d4d4; /* Slightly darker on hover for interactivity */
 }
 
-.accordion-content textarea {
+.accordion-content textarea, .accordion-title-input {
     width: 90%;
     height: 100px;
     padding: 10px; /* Padding inside the text area */
