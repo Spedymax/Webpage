@@ -1,16 +1,35 @@
-setInterval(function() {
-    fetch('getAccordionData.php')
+fetch('getAccordionData.php')
+    .then(response => response.json())
+    .then(data => {
+        if (data.length > 0 && data[0].title === 'edited') {
+            data.shift(); // Remove the 'edited' element
+            createAccordion(data);
+
+            // Send the updated data back to the server
+            updateAccordionData(data);
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching accordion data:', error);
+    });
+
+function updateAccordionData(updatedData) {
+    fetch('updateAccordionData.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ accordionData: updatedData })
+    })
         .then(response => response.json())
         .then(data => {
-            if (data.length > 0 && data[0].title === 'edited') {
-                data.shift(); // Remove the first element
-                createAccordion(data);
-            }
+            console.log('Data updated:', data);
         })
         .catch(error => {
-            console.error('Error fetching accordion data:', error);
+            console.error('Error updating accordion data:', error);
         });
-}, 3000);
+}
+
 
 
 
