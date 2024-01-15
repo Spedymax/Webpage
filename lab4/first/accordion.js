@@ -29,10 +29,11 @@ function toggleAccordion(index) {
     }
 }
 function saveAccordionChanges() {
-    var accordionData = [];
+    var accordionData = [{ title: 'edited', content: '' }];
     document.querySelectorAll('.accordion-item').forEach(function(item) {
     var title = item.querySelector('.accordion-title-input').value;
     var content = item.querySelector('textarea').value;
+    accordionData.push('edited')
     accordionData.push({ title: title, content: content });
 });
 

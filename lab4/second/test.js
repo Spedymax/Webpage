@@ -1,20 +1,18 @@
 // JavaScript to fetch accordion data and create accordion elements
-document.addEventListener('test', function() {
-    console.log("The start event was triggered")
-    setInterval(fetchAccordionData, 30000); // Оновлення кожні 30 секунд
-});
-
-
-function fetchAccordionData() {
+setInterval(function() {
     fetch('getAccordionData.php')
         .then(response => response.json())
         .then(data => {
-            createAccordion(data);
+            if (data.length > 0 && data[0].title === 'edited') {
+                data.shift(); // Remove the first element
+                createAccordion(data);
+            }
         })
         .catch(error => {
             console.error('Error fetching accordion data:', error);
         });
-}
+}, 3000);
+
 
 
 function createAccordion(accordionData) {
