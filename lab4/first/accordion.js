@@ -1,4 +1,5 @@
-function createAccordion(count) {
+function createAccordion() {
+    var count = document.getElementById("accordionCount").value;
     var accordionContainer = document.getElementById("accordion");
     accordionContainer.innerHTML = '';
 
@@ -6,8 +7,10 @@ function createAccordion(count) {
         var accordionItem = document.createElement("div");
         accordionItem.classList.add("accordion-item");
         accordionItem.innerHTML = `
-            <input type="text" class="accordion-header-input" value="Розділ ${i + 1}" oninput="saveAccordionChanges()">
-            <div class="accordion-header" onclick="toggleAccordion(${i})">Розділ ${i + 1}</div>
+            <div class="accordion-header">
+                <input type="text" class="accordion-title-input" placeholder="Введіть заголовок тут..." oninput="saveAccordionChanges()">
+                <button onclick="toggleAccordion(${i})">Розкрити</button>
+            </div>
             <div class="accordion-content" id="content-${i}" style="display:none;">
                 <textarea oninput="saveAccordionChanges()">Введіть ваш текст тут...</textarea>
             </div>
@@ -19,10 +22,10 @@ function createAccordion(count) {
 function saveAccordionChanges() {
     var accordionData = [];
     document.querySelectorAll('.accordion-item').forEach(function(item) {
-        var header = item.querySelector('.accordion-header-input').value;
-        var content = item.querySelector('textarea').value;
-        accordionData.push({header: header, content: content});
-    });
+    var title = item.querySelector('.accordion-title-input').value;
+    var content = item.querySelector('textarea').value;
+    accordionData.push({ title: title, content: content });
+});
 
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "updateAccordion.php", true);
@@ -31,6 +34,6 @@ function saveAccordionChanges() {
 
     xhr.onload = function() {
         console.log("Зміни збережено: " + this.responseText);
-        alert('Збережено');
+        alert('Збережено')
     };
 }
