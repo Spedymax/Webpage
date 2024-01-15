@@ -19,13 +19,13 @@ function createAccordion(accordionData) {
     var accordionContainer = document.getElementById('accordion');
     accordionContainer.innerHTML = ''; // Clear previous content
 
-    accordionData.forEach(function(content, index) {
+    accordionData.forEach(function(item, index) {
         var accordionItem = document.createElement('div');
         accordionItem.classList.add('accordion-item');
 
         var accordionHeader = document.createElement('div');
         accordionHeader.classList.add('accordion-header');
-        accordionHeader.textContent = 'Section ' + (index + 1);
+        accordionHeader.textContent = item.title || 'Розділ ' + (index + 1);
         accordionHeader.addEventListener('click', function() {
             toggleAccordion('content-' + index);
         });
@@ -34,7 +34,7 @@ function createAccordion(accordionData) {
         accordionContent.classList.add('accordion-content');
         accordionContent.id = 'content-' + index;
         accordionContent.style.display = 'none';
-        accordionContent.innerHTML = '<p>' + content + '</p>';
+        accordionContent.innerHTML = '<p>' + item.content + '</p>';
 
         accordionItem.appendChild(accordionHeader);
         accordionItem.appendChild(accordionContent);
