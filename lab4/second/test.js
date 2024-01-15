@@ -1,4 +1,3 @@
-// JavaScript to fetch accordion data and create accordion elements
 setInterval(function() {
     fetch('getAccordionData.php')
         .then(response => response.json())
