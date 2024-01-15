@@ -7,9 +7,8 @@ function createAccordion() {
         var accordionItem = document.createElement("div");
         accordionItem.classList.add("accordion-item");
         accordionItem.innerHTML = `
-            <div class="accordion-header">
+            <div class="accordion-header" onclick="toggleAccordion(${i})">
                 <input type="text" class="accordion-title-input" placeholder="Введіть заголовок тут...">
-                <button onclick="toggleAccordion(${i})">Розкрити</button>
             </div>
             <div class="accordion-content" id="content-${i}" style="display:none;">
                 <textarea>Введіть ваш текст тут...</textarea>

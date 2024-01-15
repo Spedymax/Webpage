@@ -146,9 +146,17 @@ h2, h3 {
     background-color: #d4d4d4; /* Slightly darker on hover for interactivity */
 }
 
-.accordion-content textarea, .accordion-title-input {
+.accordion-content textarea {
     width: 90%;
     height: 100px;
+    padding: 10px; /* Padding inside the text area */
+    border: 1px solid #ccc; /* Subtle border for the text area */
+    border-radius: 4px; /* Slightly rounded corners for the text area */
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.1); /* Inner shadow for depth */
+}
+ .accordion-title-input {
+    width: 70%;
+    height: 10px;
     padding: 10px; /* Padding inside the text area */
     border: 1px solid #ccc; /* Subtle border for the text area */
     border-radius: 4px; /* Slightly rounded corners for the text area */
