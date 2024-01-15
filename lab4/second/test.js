@@ -1,7 +1,9 @@
 // JavaScript to fetch accordion data and create accordion elements
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('test', function() {
+    console.log("The start event was triggered")
     setInterval(fetchAccordionData, 30000); // Оновлення кожні 30 секунд
 });
+
 
 function fetchAccordionData() {
     fetch('getAccordionData.php')

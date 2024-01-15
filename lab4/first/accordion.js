@@ -1,3 +1,6 @@
+// To assign event
+const startEvent = new Event("test");
+
 function createAccordion() {
     var count = document.getElementById("accordionCount").value;
     var accordionContainer = document.getElementById("accordion");
@@ -40,6 +43,8 @@ function saveAccordionChanges() {
 
     xhr.onload = function() {
         console.log("Зміни збережено: " + this.responseText);
+        // To trigger the Event
+        document.dispatchEvent(startEvent);
         alert('Збережено')
     };
 }
