@@ -8,10 +8,6 @@
     flex-direction: row;
 }
 
-h2, h3 {
-    margin: 0;
-}
-
 .column {
     display: flex;
     flex-direction: column;
@@ -41,8 +37,7 @@ h2, h3 {
 
 .footer {
     background-color: #c4d7ef;
-    border: #030303;
-    border-style: solid;
+    border: solid #030303;
     border-radius: 7px;
     padding: 20px;
     text-align: center;
@@ -53,8 +48,7 @@ h2, h3 {
 
 .header {
     background-color: #c4d7ef;
-    border: #030303;
-    border-style: solid;
+    border: solid #030303;
     border-radius: 7px;
     padding: 20px;
     text-align: center;
@@ -109,16 +103,14 @@ h2, h3 {
 
 .x {
     align-self: center;
-    border: #030303;
-    border-style: solid;
+    border: solid #030303;
     background-color: #ffffff;
     border-radius: 7px;
     }
 
 .y {
     align-self: center;
-    border: #030303;
-    border-style: solid;
+    border: solid #030303;
     background-color: #ffffff;
     border-radius: 7px;
 }
@@ -156,9 +148,6 @@ h2, h3 {
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
-    .container {
-        /* Adjust container for mobile */
-    }
 
     .row, .column {
         /* Stack elements vertically */
@@ -169,11 +158,6 @@ h2, h3 {
         /* Make all flex items full width on small screens */
         flex: 1;
         flex-direction: column;
-    }
-
-    h2, h3 {
-        /* Adjust header text sizes */
-        font-size: smaller;
     }
 
     /* Adjust padding and margin for smaller screens */
