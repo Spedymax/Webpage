@@ -1,6 +1,6 @@
 // JavaScript to fetch accordion data and create accordion elements
 document.addEventListener('DOMContentLoaded', function() {
-    setInterval(fetchAccordionData, 5000); // Оновлення кожні 5 секунд
+    setInterval(fetchAccordionData, 30000); // Оновлення кожні 30 секунд
 });
 
 function fetchAccordionData() {
